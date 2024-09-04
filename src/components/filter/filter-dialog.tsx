@@ -80,55 +80,55 @@ export default function FilterDialog(): JSX.Element {
             <h2>Maps</h2>
             <div className={styles['map-container']}>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Golden_Lakes_Map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Archipelago.png')}
                     value={filter.maps.includes('SPEC Archipelago')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Archipelago')}
                     name="Archipelago">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/463px-Llanganati_AoE2_Map.webp.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Bog_Islands.png')}
                     value={filter.maps.includes('SPEC Bog Islands')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Bog Islands')}
                     name="Bog Islands">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Outcrop_AoE2_map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Crater_Lake.png')}
                     value={filter.maps.includes('SPEC Crater Lake')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Crater Lake')}
                     name="Crater Lake">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Coast_to_Mountains_AoE2_Map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Migration.png')}
                     value={filter.maps.includes('SPEC Migration')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Migration')}
                     name="Migration">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Fractal_AoE2_map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Northern_Isles.png')}
                     value={filter.maps.includes('SPEC Northern Isles')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Northern Isles')}
                     name="Northern Isles">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Ring_of_Reeds_AoE2_map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Pacific_Islands.png')}
                     value={filter.maps.includes('SPEC Pacific Islands')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Pacific Islands')}
                     name="Pacific Islands">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Spiral_AoE2_map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Islands.png')}
                     value={filter.maps.includes('SPEC Islands')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Islands')}
                     name="Islands">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/TheHipOs_AoE2Map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_The_Passage.png')}
                     value={filter.maps.includes('SPEC The Passage')}
                     onChange={onMapFilterChange.bind(this, 'SPEC The Passage')}
                     name="The Passage">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Fortified_Clearing_AoE2_map.png')}
+                    imageSrc={useBaseUrl('/img/maps/SPEC_Water_Nomad.png')}
                     value={filter.maps.includes('SPEC Water Nomad')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Water Nomad')}
                     name="Water Nomad">
