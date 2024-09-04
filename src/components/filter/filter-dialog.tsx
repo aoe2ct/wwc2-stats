@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './filter-dialog.module.css'
 import FilterMapItem from './filter-map-item';
-import {pull, uniq, merge, cloneDeep} from 'lodash-es';
+import { pull, uniq, merge, cloneDeep } from 'lodash-es';
 import FilterBracketItem from './filter-bracket-item';
 import FilterStageItem from './filter-stage-item';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -22,18 +22,16 @@ export default function FilterDialog(): JSX.Element {
     const onClickHandler = (isApplied) => {
         const dialog = document.getElementById('filter-dialog') as HTMLDialogElement;
         if (isApplied && typeof (window as any).setFilter === 'function') {
-            (window as any).setFilter(filter);   
+            (window as any).setFilter(filter);
         }
         dialog.close();
     };
     const defaultFilter: Filter = {
         maps: [
-            'SPEC The Passage', 'SPEC Migration', 'SPEC Water Nomad',
-            'SPEC Northern Isles', 
+            "SPEC Archipelago", "SPEC Bog Islands", "SPEC Crater Lake", "SPEC Islands", 'SPEC Migration', 'SPEC Northern Isles', 'SPEC Pacific Islands', 'SPEC The Passage', 'SPEC Water Nomad',
         ],
         brackets: [
-            'Champion', 'Monks', 'Mangonels', 'Knights', 'Light Cavs', 'Pikemen',
-            'Longswords', 'Crossbows', 'Skirms', 'Spearmen', 'Archers', 'Militia',
+            'Commodore', 'Captain', 'Discoverer', 'Sailor',
         ],
         stages: [
             'Group', 'Quarter Final', 'Semi Final', 'Final',
@@ -82,10 +80,22 @@ export default function FilterDialog(): JSX.Element {
             <h2>Maps</h2>
             <div className={styles['map-container']}>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/TheHipOs_AoE2Map.png')}
-                    value={filter.maps.includes('SPEC The Passage')}
-                    onChange={onMapFilterChange.bind(this, 'SPEC The Passage')}
-                    name="The Passage">
+                    imageSrc={useBaseUrl('/img/maps/Golden_Lakes_Map.png')}
+                    value={filter.maps.includes('SPEC Archipelago')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Archipelago')}
+                    name="Archipelago">
+                </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/463px-Llanganati_AoE2_Map.webp.png')}
+                    value={filter.maps.includes('SPEC Bog Islands')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Bog Islands')}
+                    name="Bog Islands">
+                </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/Outcrop_AoE2_map.png')}
+                    value={filter.maps.includes('SPEC Crater Lake')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Crater Lake')}
+                    name="Crater Lake">
                 </FilterMapItem>
                 <FilterMapItem
                     imageSrc={useBaseUrl('/img/maps/Coast_to_Mountains_AoE2_Map.png')}
@@ -94,19 +104,37 @@ export default function FilterDialog(): JSX.Element {
                     name="Migration">
                 </FilterMapItem>
                 <FilterMapItem
-                    imageSrc={useBaseUrl('/img/maps/Fortified_Clearing_AoE2_map.png')}
-                    value={filter.maps.includes('SPEC Water Nomad')}
-                    onChange={onMapFilterChange.bind(this, 'SPEC Water Nomad')}
-                    name="Water Nomad">
-                </FilterMapItem>
-                <FilterMapItem
                     imageSrc={useBaseUrl('/img/maps/Fractal_AoE2_map.png')}
                     value={filter.maps.includes('SPEC Northern Isles')}
                     onChange={onMapFilterChange.bind(this, 'SPEC Northern Isles')}
                     name="Northern Isles">
                 </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/Ring_of_Reeds_AoE2_map.png')}
+                    value={filter.maps.includes('SPEC Pacific Islands')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Pacific Islands')}
+                    name="Pacific Islands">
+                </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/Spiral_AoE2_map.png')}
+                    value={filter.maps.includes('SPEC Islands')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Islands')}
+                    name="Islands">
+                </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/TheHipOs_AoE2Map.png')}
+                    value={filter.maps.includes('SPEC The Passage')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC The Passage')}
+                    name="The Passage">
+                </FilterMapItem>
+                <FilterMapItem
+                    imageSrc={useBaseUrl('/img/maps/Fortified_Clearing_AoE2_map.png')}
+                    value={filter.maps.includes('SPEC Water Nomad')}
+                    onChange={onMapFilterChange.bind(this, 'SPEC Water Nomad')}
+                    name="Water Nomad">
+                </FilterMapItem>
             </div>
-            <hr/>
+            <hr />
             <h2>Brackets</h2>
             <div className={styles['map-container']}>
                 <FilterBracketItem
@@ -134,7 +162,7 @@ export default function FilterDialog(): JSX.Element {
                     name={"Sailor"}>
                 </FilterBracketItem>
             </div>
-            <hr/>
+            <hr />
             <h2>Stages</h2>
             <div className={styles['map-container']}>
                 <FilterStageItem
@@ -158,7 +186,7 @@ export default function FilterDialog(): JSX.Element {
                     name="Finals">
                 </FilterStageItem>
             </div>
-            <hr/>
+            <hr />
             <div className={styles['action-container']}>
                 <button onClick={onClickHandler.bind(this, true)} className={`${styles['action-btn']}`}>APPLY FILTERS</button>
                 <button onClick={onClickHandler.bind(this, false)} className={`${styles['action-btn']}`}>CANCEL</button>

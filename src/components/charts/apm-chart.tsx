@@ -32,7 +32,7 @@ export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Eleme
     });
     const datasets = bracketOrder.map((bracket, index) => ({
         label: bracket,
-        data: bracketApm.get(bracket).map(eapm => ({
+        data: (bracketApm.get(bracket) ?? []).map(eapm => ({
             x: Math.random() * 0.4 + 0.4,
             y: eapm,
         })),
