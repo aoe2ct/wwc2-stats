@@ -4,21 +4,21 @@ import useDelayedColorMode from "@site/src/utils/use-delayed-color-mode";
 
 Chart.register(PointElement);
 
-const bracketOrder = ['Champion', 'Monks', 'Mangonels', 'Knights', 'Light Cavs', 'Pikemen', 'Longswords', 'Crossbows', 'Skirms', 'Spearmen', 'Archers', 'Militia'] as const;
+const bracketOrder = ['Commodore', 'Captain', 'Discoverer', 'Sailor'] as const;
 type Bracket = typeof bracketOrder[number];
 const bracketColors: { [bracket in Bracket]: string } = {
-    Champion: "#1f77b4",
-    Monks: "#ff7f0e",
-    Mangonels: "#2ca02c",
-    Knights: "#d62728",
-    "Light Cavs": "#9467bd",
-    Pikemen: "#8c564b",
-    Longswords: "#e377c2",
-    Crossbows: "#7f7f7f",
-    Skirms: "#bcbd22",
-    Spearmen: "#17becf",
-    Archers: "#0c5f68",
-    Militia: "#680c5f"
+    Commodore: "#1f77b4",
+    Captain: "#ff7f0e",
+    Discoverer: "#2ca02c",
+    Sailor: "#d62728",
+    // "Light Cavs": "#9467bd",
+    // Pikemen: "#8c564b",
+    // Longswords: "#e377c2",
+    // Crossbows: "#7f7f7f",
+    // Skirms: "#bcbd22",
+    // Spearmen: "#17becf",
+    // Archers: "#0c5f68",
+    // Militia: "#680c5f"
 };
 
 export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Element {

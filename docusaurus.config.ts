@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'T90 Community Cup in Stats',
+  title: 'Specialist Cup in Stats - Water Division',
   tagline: 'Dinosaurs are cool',
   // favicon: 'img/favicon.ico',
 
@@ -11,12 +11,12 @@ const config: Config = {
   url: 'https://salytmacska.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/tcc-in-stats/',
+  baseUrl: '/spec-water-stats/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'T90 Community Tournament', // Usually your GitHub org/user name.
-  projectName: 'T90 Community Cup in Stats', // Usually your repo name.
+  organizationName: 'Kjir', // Usually your GitHub org/user name.
+  projectName: 'spec-water-stats', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,7 +46,7 @@ const config: Config = {
     // Replace with your project's social card
     defaultMode: 'dark',
     navbar: {
-      title: 'T90 Community Cup in Stats',
+      title: 'Specialist Cup in Stats - Water Division',
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
