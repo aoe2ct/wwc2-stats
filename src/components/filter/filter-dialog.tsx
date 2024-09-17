@@ -168,7 +168,7 @@ export default function FilterDialog(): JSX.Element {
                 <FilterStageItem
                     value={filter.stages.includes('Group')}
                     onChange={onStageFilterChange.bind(this, 'Group')}
-                    name="Group A">
+                    name="Group">
                 </FilterStageItem>
                 <FilterStageItem
                     value={filter.stages.includes('Quarter Final')}
