@@ -1,3 +1,8 @@
+export const acceptableMisnamedMaps = {
+    "Bog Islands": "SPEC Bog Islands",
+    "Migration": "SPEC Migration",
+    "Northern Isles": "SPEC Northern Isles",
+};
 export const mapDraftNameToGameNameMapping = {
     "Archipelago": "SPEC Archipelago",
     "Bog Islands": "SPEC Bog Islands",
@@ -20,4 +25,11 @@ export const GameNameMappingToDisplayName = {
     'SPEC Pacific Islands': 'Pacific Islands',
     'SPEC The Passage': 'The Passage',
     'SPEC Water Nomad': 'Water Nomad',
+};
+
+export const BracketNameToImage = {
+    Commodore: null,
+    Captain: null,
+    Discoverer: null,
+    Sailor: null,
 };

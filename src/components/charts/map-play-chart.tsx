@@ -1,5 +1,5 @@
 import Chart from "./chart";
-import { GameNameMappingToDisplayName, mapDraftNameToGameNameMapping } from "@site/src/data/mapping";
+import { GameNameMappingToDisplayName, acceptableMisnamedMaps, mapDraftNameToGameNameMapping } from "@site/src/data/mapping";
 import MapChartConfig from "@site/src/utils/map-chart-config";
 import useDelayedColorMode from "@site/src/utils/use-delayed-color-mode";
 import { merge } from 'lodash-es';
@@ -10,10 +10,11 @@ export default function MapPlayChart({gamesData, filter}: {gamesData: any[], fil
     useDelayedColorMode();
     const mapData: {[key: string]: number} = gamesData.reduce(
         (acc, game) => {
-            if (acc.hasOwnProperty(game.map)) {
-                acc[game.map] = acc[game.map] + 1;
+            const mapName =  acceptableMisnamedMaps[game.map] ?? game.map;
+            if (acc.hasOwnProperty(mapName)) {
+                acc[mapName] = acc[mapName] + 1;
             } else {
-                acc[game.map] = 1;
+                acc[mapName] = 1;
             }
             return acc;
         },
