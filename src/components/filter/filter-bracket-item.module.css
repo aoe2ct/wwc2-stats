@@ -31,3 +31,7 @@
     font-weight: bold;
     white-space: break-spaces;
 }
+
+.item-text.item-text--selected {
+    background-color: var(--ifm-color-secondary-lighter);
+}
