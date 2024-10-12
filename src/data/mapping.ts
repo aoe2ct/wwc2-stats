@@ -1,5 +1,6 @@
 export const acceptableMisnamedMaps = {
     "Bog Islands": "SPEC Bog Islands",
+    "Crater Lake": "SPEC Crater Lake",
     "Migration": "SPEC Migration",
     "Northern Isles": "SPEC Northern Isles",
 };
