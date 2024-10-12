@@ -3,6 +3,7 @@ export const acceptableMisnamedMaps = {
     "Crater Lake": "SPEC Crater Lake",
     "Migration": "SPEC Migration",
     "Northern Isles": "SPEC Northern Isles",
+    "Pacific Islands": "SPEC Pacific Islands",
 };
 export const mapDraftNameToGameNameMapping = {
     "Archipelago": "SPEC Archipelago",
