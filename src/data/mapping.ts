@@ -12,7 +12,7 @@ export const mapDraftNameToGameNameMapping = {
     "Crater Lake": "SPEC Crater Lake",
     "Frazil": "SPEC Frazil",
     "Islands": "SPEC Islands",
-    "Mangrove Flood": "SPEC Mangrove Flood",
+    "Mangroove Flood": "SPEC Mangrove Flood",
     "Migration": 'SPEC Migration',
     "Northern Isles": 'SPEC Northern Isles',
     "Pacific Islands": "SPEC Pacific Islands",
