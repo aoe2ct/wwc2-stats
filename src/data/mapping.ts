@@ -7,9 +7,12 @@ export const acceptableMisnamedMaps = {
 };
 export const mapDraftNameToGameNameMapping = {
     "Archipelago": "SPEC Archipelago",
+    "Atoll": "SPEC Atoll",
     "Bog Islands": "SPEC Bog Islands",
     "Crater Lake": "SPEC Crater Lake",
+    "Frazil": "SPEC Frazil",
     "Islands": "SPEC Islands",
+    "Mangrove Flood": "SPEC Mangrove Flood",
     "Migration": 'SPEC Migration',
     "Northern Isles": 'SPEC Northern Isles',
     "Pacific Islands": "SPEC Pacific Islands",
@@ -19,9 +22,12 @@ export const mapDraftNameToGameNameMapping = {
 
 export const GameNameMappingToDisplayName = {
     "SPEC Archipelago": "Archipelago",
+    "SPEC Atoll": "Atoll",
     "SPEC Bog Islands": "Bog Islands",
     "SPEC Crater Lake": "Crater Lake",
+    "SPEC Frazil": "Frazil",
     "SPEC Islands": "Islands",
+    "SPEC Mangrove Flood": "Mangrove Flood",
     'SPEC Migration': 'Migration',
     'SPEC Northern Isles': 'Northern Isles',
     'SPEC Pacific Islands': 'Pacific Islands',
