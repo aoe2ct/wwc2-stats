@@ -29,8 +29,8 @@ export default function Base(): JSX.Element {
         <Fragment>
             <sup className={styles.attributions}>Thanks to Beargwyn for compiling all the data.</sup>
             <sup className={styles.attributions}>Thanks to Salytmacska for creating the original website.</sup>
-            <p>Welcome to the "Specialist Cup in Stats - Water Division" website. This website collects all the statistics you could ever want to know about the tournament in one place!</p>
-            <p>The data, by default summarizes the entire tournament (as of 2024.11.26). Use the filters on the toolbar to view the data pertaining to a particular group, map or bracket.</p>
+            <p>Welcome to the "Wandering Warriors Community Cup in Stats" website. This website collects all the statistics you could ever want to know about the tournament in one place!</p>
+            <p>The data, by default summarizes the entire tournament (as of 2024.11.27). Use the filters on the toolbar to view the data pertaining to a particular group, map or bracket.</p>
             <p>So let's jump in with the most encompassing stats first:</p>
             {isFilterApplied ?
                 <p>There were <span className={styles['highlighted-text']}>{filteredDraftsData.mapDrafts.length}</span> sets played over the course of the tournmament, that match the selected filters.</p> :
@@ -60,7 +60,7 @@ export default function Base(): JSX.Element {
             <p>Who is the fastest player in the tournament? We can see the eAPM over all brackets</p>
             <ApmChart gamesData={gamesData.filter(game => game.map != null)} filter={filter}></ApmChart>
             <hr></hr>
-            Thanks for checking out Specialist Cup in Stats!
+            Thanks for checking out Wandering Warriors Community Cup in Stats!
         </Fragment>
     );
 }
