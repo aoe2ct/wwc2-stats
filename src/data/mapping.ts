@@ -9,7 +9,7 @@ export const mapDraftNameToGameNameMapping = {
     "mired": "WWC2 Mired v3",
     "nomad": "WWC2 Nomad v3",
     "peace-o-pizza": "WWC2 Piece-O-Pizza v2",
-    "stranded": "WWC2 Stranded v2",
+    "Stranded": "WWC2 Stranded v2",
 };
 
 export const GameNameMappingToDisplayName = {
