@@ -3,23 +3,28 @@ import Chart from "./chart";
 import useDelayedColorMode from "@site/src/utils/use-delayed-color-mode";
 import { merge } from 'lodash-es';
 import { Filter } from "../filter/filter-dialog";
+import { allCivs } from "@site/src/data/mapping";
 
 export default function CivBanChart({ draftsData, filter }: { draftsData: { civDrafts: any[] }, filter: Filter }): JSX.Element {
     useDelayedColorMode();
-    const draftPickData: { [key: string]: { player: number, admin: number } } = draftsData.civDrafts.reduce(
-        (acc, draft) => {
-            const civBans = draft.draft.filter(v => v.action === 'ban');
-            for (const ban of civBans) {
-                const civName = ban.map;
-                if (!acc.hasOwnProperty(civName)) {
-                    acc[civName] = { player: 0, admin: 0 };
+    const baseDraftData: { [key: string]: number } = Object.fromEntries(allCivs.map((civ) => [civ, 0]));
+    const draftPickData: { [key: string]: { player: number, admin: number } } = {
+        ...baseDraftData,
+        ...draftsData.civDrafts.reduce(
+            (acc, draft) => {
+                const civBans = draft.draft.filter(v => v.action === 'ban');
+                for (const ban of civBans) {
+                    const civName = ban.map;
+                    if (!acc.hasOwnProperty(civName)) {
+                        acc[civName] = { player: 0, admin: 0 };
+                    }
+                    acc[civName][ban.type] = acc[civName][ban.type] + 1;
                 }
-                acc[civName][ban.type] = acc[civName][ban.type] + 1;
-            }
-            return acc;
-        },
-        {},
-    );
+                return acc;
+            },
+            {},
+        )
+    };
     const player_data = [];
     const admin_data = [];
     const keys = [];
