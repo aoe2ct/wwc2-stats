@@ -30,18 +30,23 @@ const bracketColors: { [bracket in Bracket]: string } = {
 
 export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Element {
     useDelayedColorMode();
-    let bracketApm: Map<Bracket, Array<number>> = new Map();
+    let bracketApm: Map<Bracket, Array<{ eapm: number, player: string }>> = new Map();
     gamesData.forEach(game => {
         if (!bracketApm.has(game.bracket)) {
             bracketApm.set(game.bracket, []);
         }
-        bracketApm.set(game.bracket, [...bracketApm.get(game.bracket), ...game.eapm]);
+        bracketApm.set(game.bracket, [
+            ...bracketApm.get(game.bracket),
+            { eapm: game.eapm[0], player: game.players[0] },
+            { eapm: game.eapm[1], player: game.players[1] }
+        ]);
     });
     const datasets = bracketOrder.map((bracket, index) => ({
         label: bracket,
         data: (bracketApm.get(bracket) ?? []).map(eapm => ({
             x: Math.random() * 0.4 + 0.4,
-            y: eapm,
+            y: eapm.eapm,
+            player: eapm.player
         })),
         xAxisID: `x${index == 0 ? '' : index}`,
         backgroundColor: bracketColors[bracket],
@@ -87,8 +92,8 @@ export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Eleme
             tooltip: {
                 enables: true,
                 callbacks: {
-                    label: ({ dataset, parsed }) => {
-                        return `${dataset.label}: ${parsed.y}`;
+                    label: ({ parsed, raw }) => {
+                        return `${raw.player}: ${parsed.y}`;
                     },
                 },
             },
@@ -100,7 +105,7 @@ export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Eleme
         },
         scales: {
             ...Object.fromEntries(
-                bracketOrder.map((bracket, index) => [
+                bracketOrder.map((_bracket, index) => [
                     `x${index == 0 ? '' : index}`,
                     {
                         beginAtZero: true,
