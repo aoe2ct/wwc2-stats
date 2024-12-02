@@ -41,7 +41,10 @@ export const GameNameMappingToDisplayName = {
 };
 
 export const BracketNameToImage = {
-    Pros: null,
+    Top128: null,
+    Top64: null,
+    Top32: null,
+    Top16: null,
 };
 
 export const allCivs = [
