@@ -86,6 +86,7 @@ export default function FilterDialog(): JSX.Element {
                 )}
             </div>
             <hr />
+            {/*
             <h2>Brackets</h2>
             <div className={styles['map-container']}>
                 {Object.entries(BracketNameToImage).map(([bracketName, bracketImage]) =>
@@ -99,6 +100,7 @@ export default function FilterDialog(): JSX.Element {
                 }
             </div>
             <hr />
+            */}
             <h2>Stages</h2>
             <div className={styles['map-container']}>
                 {allStages.map(stage =>
