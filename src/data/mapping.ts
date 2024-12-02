@@ -1,7 +1,17 @@
 export const acceptableMisnamedMaps = {
+    "WWC2 Boundary Brawl v2": "WWC2 Boundary Brawl v3",
     "WWC2 Boundary Brawl v5": "WWC2 Boundary Brawl v3",
+    "WWC2 Golden Hill v3": "WWC2 Golden Hill v4",
+    "WWC2 Graupel v1": "WWC2 Graupel v2",
+    "WWC2 Inundation v1": "WWC2 Inundation v3",
+    "WWC2 Inundation v2": "WWC2 Inundation v3",
+    "WWC2 Mired v1": "WWC2 Mired v3",
+    "WWC2 Mired v2": "WWC2 Mired v3",
+    "WWC2 Nomad v2": "WWC2 Nomad v3",
     "WWC2 Nomad v4": "WWC2 Nomad v3",
+    "WWC2 Peace-O-Pizza v1": "WWC2 Peace-O-Pizza v2",
     "WWC2 Peace-O-Pizza v3": "WWC2 Peace-O-Pizza v2",
+    "WWC2 Stranded v1": "WWC2 Stranded v2",
     "WW - Boundary Brawl": "WWC2 Boundary Brawl v3",
     "WW - Mired": "WWC2 Mired v3",
     "WW - Golden Hill": "WWC2 Golden Hill v4",
@@ -31,24 +41,7 @@ export const GameNameMappingToDisplayName = {
 };
 
 export const BracketNameToImage = {
-    Champions: null,
-    Paladins: null,
-    Monks: null,
-    Mangonels: null,
-    Scorpions: null,
-    Rams: null,
-    Knights: null,
-    "Steppe Lancers": null,
-    Camels: null,
-    "Light Cavs": null,
-    Eagles: null,
-    Pikemen: null,
-    Longswords: null,
-    Crossbows: null,
-    Skirms: null,
-    Spearmen: null,
-    Archers: null,
-    Militia: null,
+    Pros: null,
 };
 
 export const allCivs = [

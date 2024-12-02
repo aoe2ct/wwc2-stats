@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Wandering Warriors Community Cup in Stats',
+  title: 'Wandering Warriors Cup 2 in Stats',
   tagline: 'Dinosaurs are cool',
   // favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://kjir.github.io',
+  url: 'https://aoe2cm.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/wwcc-stats/',
+  baseUrl: '/wwc2-stats/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Kjir', // Usually your GitHub org/user name.
-  projectName: 'wwcc-stats', // Usually your repo name.
+  organizationName: 'aoe2cm', // Usually your GitHub org/user name.
+  projectName: 'wwc2-stats', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,7 +46,7 @@ const config: Config = {
     // Replace with your project's social card
     defaultMode: 'dark',
     navbar: {
-      title: 'Wandering Warriors Community Cup in Stats',
+      title: 'Wandering Warriors Cup 2 in Stats',
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
