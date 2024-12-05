@@ -13,6 +13,7 @@ export const acceptableMisnamedMaps = {
     "WWC2 Nomad v4": "WWC2 Nomad v3",
     "WWC2 Peace-O-Pizza v1": "WWC2 Peace-O-Pizza v2",
     "WWC2 Peace-O-Pizza v3": "WWC2 Peace-O-Pizza v2",
+    "WWC2 Peace-O-Pizza v4": "WWC2 Peace-O-Pizza v2",
     "WWC2 Stranded v1": "WWC2 Stranded v2",
     "WW - Boundary Brawl": "WWC2 Boundary Brawl v3",
     "WW - Mired": "WWC2 Mired v3",
