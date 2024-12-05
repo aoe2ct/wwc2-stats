@@ -11,6 +11,7 @@ import styles from './base.module.css';
 import GameTimeChart from './game-time-chart';
 import MapPlayChart from './map-play-chart';
 import ApmChart from './apm-chart';
+import { acceptableMisnamedMaps } from '@site/src/data/mapping';
 
 export default function Base(): JSX.Element {
     const [filter, setFilter] = useState(null);
@@ -18,7 +19,7 @@ export default function Base(): JSX.Element {
     let filteredGamesData = gamesData;
     let filteredDraftsData = draftsData;
     if (filter != null) {
-        filteredGamesData = gamesData.filter((game) => filter.brackets.includes(game.bracket) && filter.maps.includes(game.map) && filter.stages.includes(game.stage));
+        filteredGamesData = gamesData.filter((game) => filter.brackets.includes(game.bracket) && filter.maps.includes(acceptableMisnamedMaps[game.map] ?? game.map) && filter.stages.includes(game.stage));
         filteredDraftsData = {
             civDrafts: draftsData.civDrafts.filter(draft => filter.brackets.includes(draft.bracket) && filter.stages.includes(draft.stage)),
             mapDrafts: draftsData.mapDrafts.filter(draft => filter.brackets.includes(draft.bracket) && filter.stages.includes(draft.stage)),
