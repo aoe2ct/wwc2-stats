@@ -47,6 +47,7 @@ export const BracketNameToImage = {
     Top64: null,
     Top32: null,
     Top16: null,
+    Top8: null,
 };
 
 export const allCivs = [

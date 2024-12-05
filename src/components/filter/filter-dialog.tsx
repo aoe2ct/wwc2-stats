@@ -19,7 +19,7 @@ export type Filter = {
     },
 };
 
-const allStages = ['Ro128', 'Ro64', 'Ro32', 'Ro16', 'Quarter Finals', 'Semifinals', 'Finals'];
+const allStages = ['Ro128', 'Ro64', 'Ro32', 'Ro16', 'Quarterfinal', 'Semifinals', 'Finals'];
 
 export default function FilterDialog(): JSX.Element {
     const onClickHandler = (isApplied) => {

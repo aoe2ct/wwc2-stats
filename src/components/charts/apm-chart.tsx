@@ -12,7 +12,7 @@ const bracketColors: { [bracket in Bracket]: string } = {
     Top64: "#ff7f0e",
     Top32: "#2ca02c",
     Top16: "#d62728",
-    // Scorpions: "#9467bd",
+    Top8: "#9467bd",
     // Rams: "#8c564b",
     // Knights: "#e377c2",
     // "Steppe Lancers": "#7f7f7f",
