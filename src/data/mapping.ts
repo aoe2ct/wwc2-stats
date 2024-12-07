@@ -11,6 +11,7 @@ export const acceptableMisnamedMaps = {
     "WWC2 Mired v4": "WWC2 Mired v3",
     "WWC2 Nomad v2": "WWC2 Nomad v3",
     "WWC2 Nomad v4": "WWC2 Nomad v3",
+    "WWC2 Nomad v5": "WWC2 Nomad v3",
     "WWC2 Peace-O-Pizza v1": "WWC2 Peace-O-Pizza v2",
     "WWC2 Peace-O-Pizza v3": "WWC2 Peace-O-Pizza v2",
     "WWC2 Peace-O-Pizza v4": "WWC2 Peace-O-Pizza v2",
